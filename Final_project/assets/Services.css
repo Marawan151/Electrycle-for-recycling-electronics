@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav ul li a:hover {
+  color: #00aaff;
+}
+
+nav ul li a.active {
+  color: #cddde5;
+}
+
+.auth-btns button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.login {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #00aaff;
+}
+
+.register {
+  background: #00aaff;
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  color: #bbb;
+}
+
+.primary-btn {
+  background: #00aaff;
+  border: none;
+  padding: 12px 20px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-img {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.hero-img img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+section {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.service-grid,
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.card:hover {
+  background: #222;
+}
+
+.card i {
+  font-size: 24px;
+  color: #00aaff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.learn-more {
+  color: #00aaff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.step-number {
+  display: inline-block;
+  background: #00aaff;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: linear-gradient(to right, #0b47a1, #145597);
+  color: #fff;
+  padding: 40px;
+}
+
+.footer-top {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: left;
+}
+
+.footer-bottom h4 {
+  margin-bottom: 10px;
+}
+
+.footer-bottom button {
+  background: #00aaff;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  nav ul {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .auth-btns {
+    margin-top: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-img img {
+    margin-top: 20px;
+  }
+
+  .card,
+  .step {
+    width: 100%;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .primary-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .service-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+  }
+}
